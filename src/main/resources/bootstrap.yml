@@ -1,0 +1,6 @@
+server:
+    port: 8187
+
+spring:
+  application:
+    name: api-auth
