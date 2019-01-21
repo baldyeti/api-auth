@@ -1,11 +1,11 @@
-CREATE USER oauthuser WITH
+CREATE USER apiauth WITH
   LOGIN
   NOSUPERUSER
   INHERIT
   CREATEDB
   CREATEROLE
   NOREPLICATION
-  password 'oauthuser531';
+  password 'apiauth2019';
 
 DROP TABLE IF EXISTS public.oauth_client_details;
 CREATE TABLE public.oauth_client_details
@@ -24,7 +24,7 @@ CREATE TABLE public.oauth_client_details
 );
 
 ALTER TABLE public.oauth_client_details
-  OWNER to oauthuser;
+  OWNER to apiauth;
 
 
 Insert into oauth_client_details (client_id, resource_ids, client_secret, scope, authorized_grant_types, web_server_redirect_uri, authorities, access_token_validity, refresh_token_validity, additional_information, autoapprove)

@@ -5,36 +5,13 @@ spring:
       minimum-idle: 1
       connection-timeout: 900000
       jdbc-url: jdbc:postgresql://localhost:5432/api_auth
-      username: oauthuser
-      password: '{cipher}1750aeabcb300b92adedd3cdbd44e5e700bb5e4f86da1a7dfada24a2df55dc9b'
+      username: apiauth
+      password: apiauth2019
       driver-class-name: org.postgresql.Driver
       connection-init-sql:
 
-eureka:
-  instance:
-    lease-renewal-interval-in-seconds: 1
-    lease-expiration-duration-in-seconds: 2
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-
-management:
-  endpoints:
-    web.exposure.include: "*"
-  endpoint:
-    health:
-      show-details: ALWAYS
-    metrics:
-      enabled: true
-    prometheus:
-      enabled: true
-  metrics:
-    export:
-      prometheus:
-        enabled: true
-
 config:
   oauth2:
-    keystore: jwt.jks
-    keypass: '{cipher}65de9b69e0628bed30e0f737496ae72bec5b124120677a86fda2086c5c886c3929f4e59fa677d91539e22a3814610be4'
-    keyalias: keymaster
+    keystore: api-auth.pkcs12
+    keypass: s3cr3t19
+    keyalias: api-auth
